@@ -211,13 +211,25 @@
     .spec div{padding:11px 15px;font-family:var(--mono);font-size:.86rem;color:var(--muted);border-top:1px solid var(--border);display:flex;gap:12px}
     .spec div:first-child{border-top:none}
     .spec div:before{content:"—";color:var(--primary)}
-    .form-embed{margin-top:20px;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:#fff}
-    .form-embed iframe{display:block;width:100%;height:2500px;border:0}
+    .qform{display:grid;gap:14px;margin-top:20px}
+    .qform label,.qform legend{display:grid;gap:6px;font-family:var(--mono);font-size:.78rem;letter-spacing:.03em;color:var(--muted)}
+    .qform input[type=text],.qform input[type=tel],.qform input[type=email],.qform input[type=date],.qform select,.qform textarea{width:100%;padding:12px 13px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--text);font:inherit;font-family:var(--body);font-size:1rem}
+    .qform input:focus,.qform select:focus,.qform textarea:focus{outline:2px solid var(--primary);outline-offset:1px;background:#fff}
+    .qform textarea{resize:vertical}
+    .qform fieldset{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+    .qform legend{margin-bottom:8px;padding:0}
+    .qform .chip{display:inline-flex;cursor:pointer}
+    .qform .chip input{position:absolute;opacity:0;pointer-events:none}
+    .qform .chip span{padding:9px 14px;border:1px solid var(--border);border-radius:999px;background:var(--bg);color:var(--text);font-family:var(--body);font-size:.92rem;letter-spacing:0}
+    .qform .chip input:checked+span{background:var(--primary);border-color:var(--primary);color:#fff}
+    .qform .chip input:focus-visible+span{outline:2px solid var(--primary);outline-offset:2px}
+    .qform button{margin-top:4px}
+    .qdone{margin-top:20px;padding:18px 20px;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:6px;background:var(--bg);color:var(--muted)}
+    .qdone b{color:var(--text)} .qdone a{color:var(--primary);text-decoration:underline}
     .form-alt{margin:14px 0 0;font-family:var(--mono);font-size:.82rem;color:var(--muted)}
     .form-alt a{color:var(--primary);text-decoration:underline}
-    @media (min-width:680px){.form-embed iframe{height:2300px}}
-    @media (min-width:920px){.quote-grid{grid-template-columns:1.2fr .8fr;align-items:start}.quote-grid .panel-dark{position:sticky;top:96px}}
-    @media (max-width:520px){.panel-light{padding:26px 14px}}
+    @media (min-width:620px){.qform{grid-template-columns:1fr 1fr}.qform .full{grid-column:1/-1}}
+    @media (min-width:920px){.quote-grid{grid-template-columns:1.25fr .75fr;align-items:start}}
 
     /* ============ FAQ ============ */
     .faq{display:grid;gap:12px;max-width:840px}
@@ -441,10 +453,41 @@
           <div class="panel panel-light rv">
             <h2>Free estimate.<br>No pressure.</h2>
             <p style="color:var(--muted)">Tell us about your move and we'll get back to you with a free estimate.</p>
-            <div class="form-embed">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSqZ49KOVBi11BXA4oXySR2G2KHLIS73zreQwefNM8jqHw-g/viewform?embedded=true" title="Florida Pro Movers free quote request form" loading="lazy">Loading the quote form…</iframe>
-            </div>
-            <p class="form-alt">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSqZ49KOVBi11BXA4oXySR2G2KHLIS73zreQwefNM8jqHw-g/viewform" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>.</p>
+            <form class="qform" id="quoteForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeSqZ49KOVBi11BXA4oXySR2G2KHLIS73zreQwefNM8jqHw-g/formResponse" method="POST" target="quoteSink">
+              <label>Name *<input type="text" name="entry.324094568" autocomplete="name" required></label>
+              <label>Phone number *<input type="tel" name="entry.1929792619" autocomplete="tel" required></label>
+              <label>Email<input type="email" name="entry.663585438" autocomplete="email"></label>
+              <label>Preferred move date<input type="date" id="quoteDate"></label>
+              <label>Moving from (city or address) *<input type="text" name="entry.1558989704" required></label>
+              <label>Moving to (city or address)<input type="text" name="entry.1160426154"></label>
+              <label class="full">Home or office size
+                <select name="entry.1246909605">
+                  <option value="">Choose one</option>
+                  <option>Studio or 1 bedroom</option>
+                  <option>2 bedrooms</option>
+                  <option>3 bedrooms</option>
+                  <option>4+ bedrooms</option>
+                  <option>Office or commercial space</option>
+                  <option>Just a few items</option>
+                </select>
+              </label>
+              <fieldset class="full">
+                <legend>Services needed</legend>
+                <label class="chip"><input type="checkbox" name="entry.731725121" value="Moving"><span>Moving</span></label>
+                <label class="chip"><input type="checkbox" name="entry.731725121" value="Packing and unpacking"><span>Packing and unpacking</span></label>
+                <label class="chip"><input type="checkbox" name="entry.731725121" value="Cleaning"><span>Cleaning</span></label>
+                <label class="chip"><input type="checkbox" name="entry.731725121" value="Handyman work"><span>Handyman work</span></label>
+                <label class="chip"><input type="checkbox" name="entry.731725121" value="Junk removal"><span>Junk removal</span></label>
+              </fieldset>
+              <label class="full">Anything else we should know? (stairs, elevators, large or fragile items)<textarea name="entry.2071466879" rows="3"></textarea></label>
+              <input type="hidden" name="entry.1580737290_year" id="qdY" disabled>
+              <input type="hidden" name="entry.1580737290_month" id="qdM" disabled>
+              <input type="hidden" name="entry.1580737290_day" id="qdD" disabled>
+              <button class="btn btn-primary full" type="submit">Send Quote Request</button>
+            </form>
+            <div class="qdone" id="quoteDone" hidden role="status"><b>Request sent.</b> Thanks. We'll get back to you with your free estimate. Need it sooner? Call <a href="tel:3863181076">386-318-1076</a>.</div>
+            <iframe name="quoteSink" id="quoteSink" title="Form submission" hidden></iframe>
+            <p class="form-alt">Trouble sending? <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSqZ49KOVBi11BXA4oXySR2G2KHLIS73zreQwefNM8jqHw-g/viewform" target="_blank" rel="noopener noreferrer">Open the form in a new tab</a>.</p>
           </div>
           <div class="panel panel-dark rv">
             <h2>Moving soon?</h2>
@@ -502,6 +545,18 @@
   </div>
 
   <script>
+    (function(){
+      var f=document.getElementById('quoteForm'),done=document.getElementById('quoteDone'),sink=document.getElementById('quoteSink'),d=document.getElementById('quoteDate');
+      if(!f)return;
+      var sent=false;
+      function finish(){if(!sent)return;sent=false;f.hidden=true;done.hidden=false;done.scrollIntoView({block:'center',behavior:'smooth'})}
+      f.addEventListener('submit',function(){
+        var p=(d.value||'').split('-'),ids=['qdY','qdM','qdD'];
+        ids.forEach(function(id,i){var el=document.getElementById(id);el.disabled=p.length!==3;el.value=p.length===3?String(parseInt(p[i],10)):''});
+        sent=true;setTimeout(finish,2500);
+      });
+      sink.addEventListener('load',finish);
+    })();
     (function(){
       var grid=document.getElementById('proofGrid'),more=document.getElementById('proofMore');
       if(grid&&more){
