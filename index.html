@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Florida Pro Movers & Home Solutions | Moving, Cleaning & Handyman in Daytona Beach, FL</title>
+  <meta name="description" content="Woman-owned, family-operated movers in Daytona Beach. Local and long-distance moves, packing, senior moves, cleaning, and handyman services. Call 386-318-1076." />
+  <meta property="og:title" content="Florida Pro Movers & Home Solutions | Moving, Cleaning & Handyman" />
+  <meta property="og:description" content="One crew for the whole move. Packing, moving, cleaning, and handyman services in Daytona Beach and Volusia County." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/og-image.png" />
+  <meta name="theme-color" content="#071A2E" />
+  <meta name="robots" content="noindex, nofollow" /><!-- preview only: remove at launch -->
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62.5..125,100..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "Florida Pro Movers & Home Solutions",
+    "description": "Woman-owned, family-operated moving company offering local and long-distance moves, packing, senior moves, cleaning, and handyman services.",
+    "telephone": "+13863181076",
+    "image": "./assets/og-image.png",
+    "areaServed": [
+      { "@type": "City", "name": "Daytona Beach" },
+      { "@type": "City", "name": "New Smyrna Beach" },
+      { "@type": "City", "name": "Palm Coast" },
+      { "@type": "AdministrativeArea", "name": "Volusia County" }
+    ],
+    "address": { "@type": "PostalAddress", "streetAddress": "207 N Peninsula Dr", "addressLocality": "Daytona Beach", "addressRegion": "FL", "postalCode": "32118", "addressCountry": "US" }
+  }
+  </script>
+  <style>
+    /* ============ TOKENS ============ */
+    :root{
+      --bg:#F4F8FB;
+      --surface:#FFFFFF;
+      --surface-dark:#0C2742;
+      --bg-dark:#071A2E;
+      --graphite:#143A5E;
+      --text:#0D2238;
+      --muted:#536079;
+      --faint:#A9BCD0;
+      --inverse:#FFFFFF;
+      --border:#D5E0EC;
+      --border-dark:rgba(255,255,255,.10);
+      --brand:#1F74D8;          /* emblem blue: buttons */
+      --brand-hover:#175DB3;
+      --sky:#5DB5F5;            /* emblem sky blue: accents on dark */
+      --primary:#1A5FB8;        /* blue ink: accent text on light surfaces */
+      --primary-hover:#134A91;
+      --accent:#2FB8A6;         /* emblem teal */
+      --radius:8px;
+      --max:1200px;
+      --display:'Archivo','Arial Narrow',Arial,sans-serif;
+      --body:'IBM Plex Sans',system-ui,sans-serif;
+      --mono:'IBM Plex Mono',ui-monospace,monospace;
+    }
+
+    .site-header,.hero,.sec-dark,.sec-steel,.panel-dark,.footer,.why-media .tag,.hero-stamp{--primary:var(--sky);--primary-hover:#8FD0FF}
+
+    /* ============ BASE ============ */
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:var(--body);font-size:16.5px;line-height:1.65;color:var(--text);background:var(--bg)}
+    img,video{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:4px}
+    .container{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+    section{padding:72px 0}
+    .sec-dark{background:var(--bg-dark);color:var(--inverse)}
+    .sec-steel{background:var(--surface-dark);color:var(--inverse)}
+    .sec-dark p,.sec-steel p{color:var(--faint)}
+
+    /* Display type */
+    h1,h2,h3,.display{font-family:var(--display);font-stretch:66%;font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:.005em;margin:0}
+    h1{font-size:clamp(3.2rem,9.5vw,7.2rem)}
+    h2{font-size:clamp(2.3rem,5vw,4.2rem);margin-bottom:18px}
+    h3{font-size:1.45rem;font-weight:700;margin-bottom:8px}
+
+    /* ============ SIGNATURE: MANIFEST PLATE ============ */
+    .plate{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+    .plate .idx{font-family:var(--mono);font-size:.8rem;color:var(--primary);letter-spacing:.06em;white-space:nowrap}
+    .plate .lbl{font-family:var(--display);font-stretch:125%;font-weight:600;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap}
+    .plate:after{content:"";flex:1;height:1px;background:var(--border)}
+    .sec-dark .plate:after,.sec-steel .plate:after{background:var(--border-dark)}
+    .sec-dark .plate .lbl,.sec-steel .plate .lbl{color:var(--faint)}
+
+    /* ============ BUTTONS ============ */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 28px;border-radius:6px;border:1px solid transparent;font-family:var(--display);font-stretch:90%;font-weight:700;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .18s ease,border-color .18s ease,color .18s ease}
+    .btn-primary{background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 40%), var(--brand);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 12px 28px rgba(31,116,216,.34)}
+    .btn-primary:hover{background:var(--brand-hover)}
+    .btn-ghost-dark{border-color:var(--border-dark);color:var(--inverse)}
+    .btn-ghost-dark:hover{border-color:var(--primary);color:var(--primary)}
+    .btn-ghost-light{border-color:var(--border);color:var(--text);background:var(--surface)}
+    .btn-ghost-light:hover{border-color:var(--primary);color:var(--primary)}
+    .btn .num{font-family:var(--mono);font-size:.92rem;letter-spacing:.02em;text-transform:none}
+
+    /* ============ HEADER ============ */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(7,26,46,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-dark);transition:box-shadow .2s ease}
+    .site-header.scrolled{box-shadow:0 14px 40px rgba(0,0,0,.45)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}
+    .decal{background:transparent;border-radius:0;padding:0;display:inline-flex;align-items:center;box-shadow:none}
+    .decal img{width:250px;height:auto}
+    .nav-links{display:none;gap:26px;font-family:var(--display);font-stretch:100%;font-weight:600;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+    .nav-links a:hover{color:#fff}
+    .nav .btn{padding:12px 18px}
+    @media (min-width:920px){.nav-links{display:flex}.decal img{width:270px}}
+    @media (max-width:520px){.decal img{width:186px}}
+    @media (max-width:460px){.nav .num{display:none}}
+
+    /* ============ HERO ============ */
+    .hero{background:
+      radial-gradient(1100px 500px at 85% -10%,rgba(31,116,216,.16),transparent 60%),
+      var(--bg-dark);
+      color:var(--inverse);padding:84px 0 88px;overflow:hidden}
+    .hero-grid{display:grid;gap:44px}
+    .kicker{font-family:var(--display);font-stretch:125%;font-weight:600;font-size:.76rem;letter-spacing:.28em;text-transform:uppercase;color:var(--primary);display:inline-flex;align-items:center;gap:12px}
+    .kicker:before{content:"";width:34px;height:2px;background:var(--primary)}
+    .hero h1{margin:22px 0 6px}
+    .strap{width:120px;height:4px;background:linear-gradient(90deg,var(--sky),var(--accent));margin:22px 0 26px}
+    .hero-copy p{max-width:56ch;font-size:1.12rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 30px}
+    .manifest{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border-dark);border-radius:var(--radius);overflow:hidden;max-width:560px}
+    .manifest div{padding:13px 16px;font-family:var(--mono);font-size:.82rem;letter-spacing:.03em;color:var(--faint);border-top:1px solid var(--border-dark)}
+    .manifest div:nth-child(-n+2){border-top:none}
+    .manifest div:nth-child(odd){border-right:1px solid var(--border-dark)}
+    .manifest b{color:#fff;font-weight:500}
+    .hero-media{position:relative}
+    .hero-media img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border-dark)}
+    .hero-media:after{content:"";position:absolute;inset:0;border-radius:var(--radius);background:linear-gradient(200deg,transparent 55%,rgba(7,26,46,.55));pointer-events:none}
+    .hero-stamp{position:absolute;left:16px;bottom:16px;z-index:2;background:rgba(7,26,46,.86);backdrop-filter:blur(6px);border:1px solid var(--border-dark);border-left:3px solid var(--primary);border-radius:6px;padding:12px 16px;max-width:290px}
+    .hero-stamp .idx{font-family:var(--mono);font-size:.72rem;color:var(--primary);display:block;margin-bottom:4px}
+    .hero-stamp p{margin:0;color:#fff;font-size:.92rem;line-height:1.45}
+    @media (min-width:920px){.hero-grid{grid-template-columns:1.15fr .85fr;align-items:center}}
+
+    /* ============ SERVICES ============ */
+    .svc-grid{display:grid;gap:16px;margin-top:8px}
+    .svc{background:var(--surface-dark);border:1px solid var(--border-dark);border-radius:var(--radius);padding:26px 24px;position:relative;overflow:hidden;transition:border-color .18s ease}
+    .svc:before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--primary);transition:width .25s ease}
+    .svc:hover{border-color:rgba(31,116,216,.5)}
+    .svc:hover:before{width:100%}
+    .svc .idx{font-family:var(--mono);font-size:.74rem;color:var(--primary);letter-spacing:.06em;display:block;margin-bottom:12px}
+    .svc p{margin:8px 0 0;font-size:.98rem}
+    @media (min-width:680px){.svc-grid{grid-template-columns:1fr 1fr}}
+    @media (min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+    .svc-note{margin-top:26px;display:flex;gap:12px;align-items:baseline;font-family:var(--mono);font-size:.86rem;color:var(--faint)}
+    .svc-note:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);transform:translateY(-1px);flex:none}
+
+    /* ============ WHY / FEATURED PROOF ============ */
+    .why-grid{display:grid;gap:36px;align-items:center}
+    .why-media{position:relative}
+    .why-media img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border)}
+    .why-media .tag{position:absolute;top:14px;left:14px;background:var(--bg-dark);color:#fff;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;padding:7px 11px;border-radius:4px;border-left:3px solid var(--primary)}
+    .why-copy .lead{font-size:1.12rem;color:var(--muted);max-width:58ch}
+    .checklist{display:grid;gap:14px;margin-top:26px}
+    .checklist div{position:relative;padding-left:34px;color:var(--muted)}
+    .checklist div b{color:var(--text);font-weight:600}
+    .checklist div:before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border:2px solid var(--primary);border-radius:3px;background:
+      linear-gradient(45deg,transparent 42%,var(--primary) 42%,var(--primary) 58%,transparent 58%)}
+    @media (min-width:920px){.why-grid{grid-template-columns:.9fr 1.1fr}}
+
+    /* ============ VIDEO ============ */
+    .video-grid{display:grid;gap:38px;align-items:center}
+    .video-frame{background:var(--graphite);border:1px solid var(--border-dark);border-radius:12px;padding:10px;max-width:400px;margin:0 auto;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+    .video-frame video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px;background:#000}
+    .video-frame .bar{display:flex;justify-content:space-between;padding:9px 6px 2px;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--faint)}
+    .video-copy h2{color:#fff}
+    .video-copy p{max-width:54ch}
+    @media (min-width:920px){.video-grid{grid-template-columns:.8fr 1.2fr}}
+
+    /* ============ GALLERY ============ */
+    .gallery{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+    .gallery figure{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+    .gallery img{width:100%;height:auto;object-fit:cover;aspect-ratio:4/5}
+    .proof img{height:auto}
+    .gallery figcaption{display:flex;gap:10px;align-items:baseline;padding:13px 15px;font-family:var(--mono);font-size:.8rem;color:var(--muted);border-top:1px solid var(--border)}
+    .gallery figcaption span{color:var(--primary)}
+    @media (min-width:920px){.gallery{grid-template-columns:repeat(4,1fr)}}
+
+    /* ============ PROOF: REAL JOB PHOTOS ============ */
+    .proof{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+    .proof figure{margin:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-dark);background:var(--surface-dark)}
+    .proof img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+    .proof figure:first-child{grid-column:span 2}
+    .proof figure:first-child img{aspect-ratio:8/5}
+    .proof.collapsed figure:nth-child(n+8){display:none}
+    .proof-more{margin-top:22px;background:transparent}
+    @media (min-width:680px){.proof{grid-template-columns:repeat(3,1fr)}.proof.collapsed figure:nth-child(n+8){display:block}.proof.collapsed figure:nth-child(n+12){display:none}}
+    @media (min-width:1000px){.proof{grid-template-columns:repeat(4,1fr)}}
+
+    /* ============ SERVICE AREA ============ */
+    .area{padding:64px 0}
+    .cities{font-family:var(--display);font-stretch:66%;font-weight:800;text-transform:uppercase;font-size:clamp(1.9rem,5.2vw,3.6rem);line-height:1.12;color:#fff;display:flex;flex-wrap:wrap;column-gap:22px;row-gap:4px;align-items:baseline}
+    .cities i{font-style:normal;color:var(--primary);font-stretch:100%;font-weight:400;font-size:.6em}
+    .area p{max-width:64ch;margin-top:18px}
+
+    /* ============ QUOTE ============ */
+    .quote-grid{display:grid;gap:20px}
+    .panel{border-radius:var(--radius);padding:34px 30px}
+    .panel-light{background:var(--surface);border:1px solid var(--border)}
+    .panel-dark{background:
+      radial-gradient(600px 300px at 100% 0%,rgba(31,116,216,.28),transparent 60%),
+      var(--bg-dark);color:#fff;border:1px solid var(--border-dark)}
+    .panel-dark p{color:var(--faint)}
+    .panel-meta{margin-top:26px;border-top:1px solid var(--border-dark);padding-top:18px;display:grid;gap:8px;font-family:var(--mono);font-size:.84rem;letter-spacing:.03em;color:var(--faint)}
+    .panel-meta b{color:#fff;font-weight:500}
+    .spec{display:grid;gap:0;margin-top:22px;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+    .spec div{padding:11px 15px;font-family:var(--mono);font-size:.86rem;color:var(--muted);border-top:1px solid var(--border);display:flex;gap:12px}
+    .spec div:first-child{border-top:none}
+    .spec div:before{content:"—";color:var(--primary)}
+    .form-embed{margin-top:20px;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:#fff}
+    .form-embed iframe{display:block;width:100%;height:2360px;border:0}
+    .form-alt{margin:14px 0 0;font-family:var(--mono);font-size:.82rem;color:var(--muted)}
+    .form-alt a{color:var(--primary);text-decoration:underline}
+    @media (min-width:680px){.form-embed iframe{height:2170px}}
+    @media (min-width:920px){.quote-grid{grid-template-columns:1.2fr .8fr;align-items:start}.quote-grid .panel-dark{position:sticky;top:96px}}
+    @media (max-width:520px){.panel-light{padding:26px 14px}}
+
+    /* ============ FAQ ============ */
+    .faq{display:grid;gap:12px;max-width:840px}
+    .faq details{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;font-family:var(--display);font-stretch:80%;font-weight:700;font-size:1.12rem;text-transform:uppercase;letter-spacing:.03em}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary:after{content:"+";font-family:var(--mono);color:var(--primary);font-size:1.3rem;transition:transform .2s ease;flex:none}
+    .faq details[open] summary:after{transform:rotate(45deg)}
+    .faq details p{margin:0;padding:0 22px 20px;color:var(--muted)}
+
+    /* ============ FOOTER ============ */
+    .footer{background:var(--bg-dark);color:var(--faint);padding:56px 0 110px;border-top:1px solid var(--border-dark)}
+    .footer-grid{display:grid;gap:28px;align-items:center}
+    .footer .decal img{width:250px;height:auto}
+    .footer .tel{font-family:var(--mono);color:#fff;font-size:1.05rem}
+    .footer small{display:block;margin-top:14px;font-family:var(--mono);font-size:.75rem;letter-spacing:.05em}
+    @media (min-width:720px){.footer-grid{grid-template-columns:1fr auto}.footer{padding-bottom:56px}}
+
+    /* ============ MOBILE CALL BAR ============ */
+    .callbar{position:fixed;left:14px;right:14px;bottom:14px;z-index:60;display:flex}
+    .callbar .btn{width:100%;padding:17px}
+    @media (min-width:720px){.callbar{display:none}}
+
+    /* ============ REVEAL / MOTION ============ */
+    .rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+    .rv.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *{transition:none!important;animation:none!important}
+      .rv{opacity:1;transform:none}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="decal" href="#top" aria-label="Florida Pro Movers and Home Solutions home">
+        <img src="./assets/logo-fpm.png" alt="Florida Pro Movers &amp; Home Solutions logo" width="1332" height="300" />
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#video">3-in-1</a>
+        <a href="#gallery">How It Works</a>
+        <a href="#proof">Photos</a>
+        <a href="#quote">Quote</a>
+      </nav>
+      <a class="btn btn-primary" href="tel:3863181076">Call <span class="num">386-318-1076</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="kicker">Moving, Cleaning &amp; Handyman · Daytona Beach, FL</span>
+          <h1>One crew for the whole move.</h1>
+          <div class="strap" aria-hidden="true"></div>
+          <p>Packing. Moving. Cleaning. Repairs. A woman-owned, family-operated team that handles every part of your move, so you make one call instead of four.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:3863181076">Call <span class="num">386-318-1076</span></a>
+            <a class="btn btn-ghost-dark" href="#quote">Get a Quote</a>
+          </div>
+          <div class="manifest" role="list" aria-label="What we handle">
+            <div role="listitem"><b>MOVING</b> local &amp; long distance</div>
+            <div role="listitem"><b>PACKING</b> &amp; unpacking</div>
+            <div role="listitem"><b>CLEANING</b> homes &amp; offices</div>
+            <div role="listitem"><b>HANDYMAN</b> repairs &amp; installs</div>
+          </div>
+        </div>
+        <div class="hero-media rv">
+          <img src="./assets/hero.jpg" alt="Mover in a Florida Pro Movers shirt wheeling a padded, wrapped piece up a driveway on a hand truck" width="880" height="1168" loading="eager" fetchpriority="high" />
+          <div class="hero-stamp">
+            <span class="idx">GOOGLE RATING / 5.0</span>
+            <p>Rated 5.0 across 113 Google reviews. Family-owned and operated.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="sec-dark" id="services">
+      <div class="container">
+        <div class="plate rv"><span class="idx">FPM–01</span><span class="lbl">What We Do</span></div>
+        <h2 class="rv">Everything a move needs.<br>One team.</h2>
+        <div class="svc-grid">
+          <article class="svc rv"><span class="idx">SERVICE / 01</span><h3>Local &amp; Long-Distance Moves</h3><p>Homes, condos, and offices moved across town or across Florida. Padded, wrapped, and placed where you want them.</p></article>
+          <article class="svc rv"><span class="idx">SERVICE / 02</span><h3>Packing &amp; Unpacking</h3><p>Full packing, wrapping, and crating, plus boxes and supplies. We can unpack on the other end too.</p></article>
+          <article class="svc rv"><span class="idx">SERVICE / 03</span><h3>Senior Moves</h3><p>Patient, careful help with downsizing and transitions, from planning and packing to setting up the new place.</p></article>
+          <article class="svc rv"><span class="idx">SERVICE / 04</span><h3>Pianos, Safes &amp; Oversized Items</h3><p>Heavy and awkward pieces moved with the right equipment and a crew that respects the weight.</p></article>
+          <article class="svc rv"><span class="idx">SERVICE / 05</span><h3>Cleaning &amp; Junk Removal</h3><p>Residential and commercial cleaning, cleanouts, and haul-away, so the old place is left spotless.</p></article>
+          <article class="svc rv"><span class="idx">SERVICE / 06</span><h3>Handyman Services</h3><p>Furniture assembly, mounting, door and drywall repairs, and more. Book it with a move or on its own.</p></article>
+        </div>
+        <p class="svc-note rv">Only need the muscle? Labor-only loading and unloading is available.</p>
+      </div>
+    </section>
+
+    <!-- WHY PEOPLE CALL US -->
+    <section id="why">
+      <div class="container">
+        <div class="plate rv"><span class="idx">FPM–02</span><span class="lbl">Why People Call Us</span></div>
+        <div class="why-grid">
+          <div class="why-media rv">
+            <img src="./assets/team-shirt.jpg" alt="Back of a Florida Pro Movers crew shirt listing moving, packing, senior moves, pianos and safes, cleaning, and handyman" width="880" height="1168" loading="lazy" />
+            <span class="tag">Woman-owned / Family-operated</span>
+          </div>
+          <div class="why-copy">
+            <h2 class="rv">A move is more than a truck.</h2>
+            <p class="lead rv">Most moves take a mover, a cleaner, and a handyman, plus three schedules to juggle. Florida Pro Movers &amp; Home Solutions puts all three on one team, run by a local Daytona Beach family.</p>
+            <div class="checklist rv">
+              <div><b>Touch-free moves.</b> We wrap, pack, load, and unload, so you don't have to lift a thing.</div>
+              <div><b>Free in-home estimates,</b> so the quote matches the job.</div>
+              <div><b>One point of contact</b> for moving, cleaning, and handyman work, from first call to final walkthrough.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED VIDEO -->
+    <section class="sec-steel" id="video">
+      <div class="container">
+        <div class="plate rv"><span class="idx">FPM–03</span><span class="lbl">The 3-in-1 Move</span></div>
+        <div class="video-grid">
+          <div class="video-frame rv">
+            <video controls playsinline muted preload="metadata" poster="./assets/brand-reel-poster.jpg">
+              <source src="./assets/brand-reel.mp4" type="video/mp4" />
+              Your browser can't play this video. <a href="tel:3863181076">Call 386-318-1076</a> instead.
+            </video>
+            <div class="bar"><span>BRAND REEL</span><span>FPM / 3-IN-1</span></div>
+          </div>
+          <div class="video-copy">
+            <h2 class="rv">Move out. Clean up.<br>Fix up. One call.</h2>
+            <p class="rv">Moving day usually means three bookings: movers for the furniture, cleaners for the old place, and a handyman for the punch list. We do all three.</p>
+            <p class="rv">Tell us what you're moving, what needs cleaning, and what needs fixing. We'll build one plan and one quote around it.</p>
+            <div class="hero-actions rv">
+              <a class="btn btn-primary" href="tel:3863181076">Call About Your Move</a>
+              <a class="btn btn-ghost-dark" href="#quote">Send Job Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="gallery">
+      <div class="container">
+        <div class="plate rv"><span class="idx">FPM–04</span><span class="lbl">How It Works</span></div>
+        <h2 class="rv">Four steps. One team.</h2>
+        <div class="gallery">
+          <figure class="rv">
+            <img src="./assets/step-arrive.jpg" alt="Florida Pro Movers box truck with the ramp down in a home driveway" width="896" height="1120" loading="lazy" />
+            <figcaption><span>01</span>Truck, crew, and gear arrive.</figcaption>
+          </figure>
+          <figure class="rv">
+            <img src="./assets/step-wrap.jpg" alt="Upright piano padded in moving blankets and stretch wrap on a dolly" width="896" height="1120" loading="lazy" />
+            <figcaption><span>02</span>Wrap, pack, and protect.</figcaption>
+          </figure>
+          <figure class="rv">
+            <img src="./assets/step-place.jpg" alt="Safe set in place in a home office beside a hand truck and floor runner" width="896" height="1120" loading="lazy" />
+            <figcaption><span>03</span>Move it and place it.</figcaption>
+          </figure>
+          <figure class="rv">
+            <img src="./assets/step-finish.jpg" alt="Clean, empty room with a handyman installing a ceiling fan and cleaning supplies on the floor" width="896" height="1120" loading="lazy" />
+            <figcaption><span>04</span>Clean up and fix up.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF OF WORK: real photos from the business's Google profile -->
+    <section class="sec-dark" id="proof">
+      <div class="container">
+        <div class="plate rv"><span class="idx">FPM–05</span><span class="lbl">Proof of Work</span></div>
+        <h2 class="rv">Recent jobs. Real photos.</h2>
+        <div class="proof" id="proofGrid">
+          <figure><img src="./assets/jobs/job-01.jpg" alt="Florida Pro Movers box truck parked beside beachfront condos" width="1200" height="900" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-02.jpg" alt="Moving truck in the driveway of a Florida home" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-03.jpg" alt="Furniture wrapped in orange and blue moving pads inside the truck" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-04.jpg" alt="Crew member loading a padded piece into the truck" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-05.jpg" alt="Leather reclining sofa set being moved out of a living room" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-06.jpg" alt="Tall piece wrapped in stretch wrap and ready to move" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-07.jpg" alt="Truck packed tight with wrapped furniture" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-08.jpg" alt="Hot tub move at night" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-09.jpg" alt="Padded furniture and a hand truck inside the truck" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-10.jpg" alt="Shade sail over a patio with covered furniture" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-11.jpg" alt="Moving truck parked at sunset" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-12.jpg" alt="Crew in the truck cab giving a thumbs up" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-13.jpg" alt="Crew carrying items inside the truck" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-14.jpg" alt="Furniture wrapped in blue moving pads in the truck" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-15.jpg" alt="Boxes and wrapped items loaded in the truck" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-16.jpg" alt="Boxes and totes stacked floor to ceiling in the truck" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-17.jpg" alt="Dining table protected with moving pads" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-18.jpg" alt="Crew member assembling a piece on site" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-19.jpg" alt="Storage unit loaded with boxes and wrapped furniture" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-20.jpg" alt="Truck partly loaded with padded furniture" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-21.jpg" alt="Boxes and padded furniture stacked in the truck" width="900" height="1200" loading="lazy" /></figure>
+          <figure><img src="./assets/jobs/job-22.jpg" alt="Enclosed trailer loaded for a move" width="900" height="1200" loading="lazy" /></figure>
+        </div>
+        <button class="btn btn-ghost-dark proof-more" id="proofMore" type="button" hidden>Show all 22 photos</button>
+      </div>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section class="sec-steel area" id="area">
+      <div class="container">
+        <div class="plate rv"><span class="idx">FPM–06</span><span class="lbl">Service Area</span></div>
+        <div class="cities rv">
+          <span>Daytona Beach</span><i>/</i><span>New&nbsp;Smyrna Beach</span><i>/</i><span>Palm Coast</span><i>/</i><span>Volusia County</span>
+        </div>
+        <p class="rv">Based in Daytona Beach and serving Volusia County and the surrounding coast, with long-distance moves across Florida. Not sure you're in range? Call and ask.</p>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section id="quote">
+      <div class="container">
+        <div class="plate rv"><span class="idx">FPM–07</span><span class="lbl">Get a Quote</span></div>
+        <div class="quote-grid">
+          <div class="panel panel-light rv">
+            <h2>Free estimate.<br>No pressure.</h2>
+            <p style="color:var(--muted)">Tell us about your move and we'll get back to you with a free estimate.</p>
+            <div class="form-embed">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSqZ49KOVBi11BXA4oXySR2G2KHLIS73zreQwefNM8jqHw-g/viewform?embedded=true" title="Florida Pro Movers free quote request form" loading="lazy">Loading the quote form…</iframe>
+            </div>
+            <p class="form-alt">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSqZ49KOVBi11BXA4oXySR2G2KHLIS73zreQwefNM8jqHw-g/viewform" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>.</p>
+          </div>
+          <div class="panel panel-dark rv">
+            <h2>Moving soon?</h2>
+            <p>Call and we'll walk through the details and set up your free in-home estimate. Prefer to type it out? Fill in the quote form and we'll get back to you.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="tel:3863181076">Call <span class="num">386-318-1076</span></a>
+              <a class="btn btn-ghost-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSeSqZ49KOVBi11BXA4oXySR2G2KHLIS73zreQwefNM8jqHw-g/viewform" target="_blank" rel="noopener noreferrer">Open Form in New Tab</a>
+            </div>
+            <div class="panel-meta">
+              <div><b>OFFICE</b> 207 N Peninsula Dr, Daytona Beach, FL 32118</div>
+              <div><b>GOOGLE</b> Rated 5.0 across 113 reviews</div>
+              <div><b>ESTIMATES</b> Free, in your home</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="padding-top:0">
+      <div class="container">
+        <div class="plate rv"><span class="idx">FPM–08</span><span class="lbl">FAQ</span></div>
+        <div class="faq">
+          <details class="rv">
+            <summary>Do you handle full-house moves?</summary>
+            <p>Yes. Homes, condos, apartments, and offices, local or long distance within Florida. We also take labor-only jobs if you already have a truck or container.</p>
+          </details>
+          <details class="rv">
+            <summary>Can I book cleaning or handyman work without a move?</summary>
+            <p>Yes. Cleaning and handyman services are available on their own or as add-ons to a move.</p>
+          </details>
+          <details class="rv">
+            <summary>What's the fastest way to get started?</summary>
+            <p>Call 386-318-1076, or <a href="#quote" style="color:var(--primary);text-decoration:underline">fill out the quote form</a>. We'll go over what you need and schedule a free in-home estimate.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="decal" href="#top"><img src="./assets/logo-fpm.png" alt="Florida Pro Movers &amp; Home Solutions logo" width="1332" height="300" loading="lazy" /></a>
+        <small>MOVING / CLEANING / HANDYMAN · 207 N PENINSULA DR, DAYTONA BEACH, FL 32118</small>
+      </div>
+      <div>
+        <a class="tel" href="tel:3863181076">386-318-1076</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="callbar">
+    <a class="btn btn-primary" href="tel:3863181076">Call <span class="num">386-318-1076</span></a>
+  </div>
+
+  <script>
+    (function(){
+      var grid=document.getElementById('proofGrid'),more=document.getElementById('proofMore');
+      if(grid&&more){
+        grid.classList.add('collapsed');more.hidden=false;
+        more.addEventListener('click',function(){grid.classList.remove('collapsed');more.hidden=true});
+      }
+    })();
+    (function(){
+      var header=document.querySelector('.site-header');
+      addEventListener('scroll',function(){header.classList.toggle('scrolled',scrollY>8)},{passive:true});
+      if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window)){
+        document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});return;
+      }
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+      },{rootMargin:'0px 0px -8% 0px',threshold:.1});
+      document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+    })();
+  </script>
+</body>
+</html>
